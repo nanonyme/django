@@ -10,7 +10,7 @@ before_script:
   - mysql -e 'create database myapp_test;'; mysql -e 'create database myapp_other;'
   - psql -c 'create database myapp_test;' -U postgres; psql -c 'create database myapp_other;' -U postgres
 
-script: python ./tests/runtests.py --settings=test_dburl
+script: python ./tests/runtests.py --settings=test_dburl --liveserver=localhost:8080-8099
 install:
   - python setup.py install &> /dev/null
   - pip install dj-database-url
