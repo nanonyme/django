@@ -5,7 +5,7 @@ python:
 env:
   - DATABASE_URL=sqlite://test.db OTHER=sqlite://test.db
   - DATABASE_URL=mysql://root@localhost/myapp_test OTHER=mysql://root@localhost/myapp_other
-  - DATABASE_URL=postgres://root@localhost/myapp_test OTHER=postgres://root@localhost/myapp_other
+  - DATABASE_URL=postgres://postgres@localhost/myapp_test OTHER=postgres://postgres@localhost/myapp_other
 before_script:
   - mysql -e 'create database myapp_test;'; mysql -e 'create database myapp_other;'
   - psql -c 'create database myapp_test;' -U postgres; psql -c 'create database myapp_other;' -U postgres
