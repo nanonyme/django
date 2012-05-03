@@ -8,8 +8,8 @@ env:
   - DATABASE_URL=postgres://root@localhost/myapp_test
 before_script:
   - ls
-  - mysql -e 'create database myapp_test;'
-  - psql -c 'create database myapp_test;' -U postgres
+  - pip install mysql-python; mysql -e 'create database myapp_test;'
+  - pip install psycopg2; psql -c 'create database myapp_test;' -U postgres
 
 script: python ./tests/runtests.py --settings=test_dburl
 install:

@@ -20,3 +20,4 @@ DATABASES = {
 }
 
 SECRET_KEY = "django_tests_secret_key"
+
