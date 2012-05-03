@@ -13,6 +13,6 @@ before_script:
 script: python ./tests/runtests.py --settings=test_dburl --liveserver=localhost:8080-8099
 install:
   - python setup.py install &> /dev/null
-  - pip install --use-mirrors dj-database-url 
-  - pip install --use-mirrors mysql-python
-  - pip install --use-mirrors psycopg2
+  - pip install -q --use-mirrors dj-database-url 
+  - pip install -q --use-mirrors mysql-python
+  - pip install -q --use-mirrors psycopg2
