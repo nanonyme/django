@@ -7,7 +7,7 @@ env:
   - DATABASE_URL=mysql://root@localhost/myapp_test
   - DATABASE_URL=postgres://root@localhost/myapp_test
 before_script:
-  - time
+  - ls
   - mysql -e 'create database myapp_test;'
   - psql -c 'create database myapp_test;' -U postgres
 
