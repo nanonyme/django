@@ -16,7 +16,7 @@ import dj_database_url
 
 DATABASES = {
     'default':  dj_database_url.config(),
-    # 'other': dj_database_url.config()
+    'other': dj_database_url.config('OTHER')
 }
 
 SECRET_KEY = "django_tests_secret_key"
